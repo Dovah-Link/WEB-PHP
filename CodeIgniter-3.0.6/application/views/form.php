@@ -6,10 +6,10 @@
 	<meta charset="UTF-8"/> 
 </head>
 <body>
-	<form method="POST" action="insert.php">
+	<form method="POST" action="<?=site_url("liens/insert")?>">
 		<div class="container">
 				<h1><p class="text-center">FORMULAIRE</p></h1>
-				<h4><p  class="text-center"><a href="index.php">Retour à la liste</a></p></h4></br></br>
+				<h4><p  class="text-center"><a href="<?=site_url("liens/index")?>">Retour à la liste</a></p></h4></br></br>
 
 				<div class="input-group input-group-lg">
 			  		<span class="input-group-addon" id="sizing-addon1"><div class="glyphicon glyphicon-text-size"></div></span>
@@ -69,6 +69,6 @@
 </body>
 </html>
 
-<script src="<?=base_url("js/bootstrap.js")?>"></script>
-<script src="<?=base_url("js/fctJQ.js")?>"></script>
-<script src="<?=base_url("js/jquery.js")?>"></script>
+<script src="<?=base_url("script/jquery.js")?>"></script>
+<script src="<?=base_url("script/bootstrap.js")?>"></script>
+<script src="<?=base_url("script/fctJQ.js")?>"></script>

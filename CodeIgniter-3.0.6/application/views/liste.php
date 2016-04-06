@@ -12,7 +12,7 @@
 		<div class="col-md-12">
 			<table class='table'>
 				<h1 id="titreListes">LISTES</h1>
-				<h4 id="titreEnregistrer"><a href="<?=site_url("liens/Form")?>">Ajouter un nouvel enregistrement</a></h4></br></br>
+				<h4 id="titreEnregistrer"><a href="<?=site_url("liens/form")?>">Ajouter un nouvel enregistrement</a></h4></br></br>
 
 <?php 		
 				foreach ($liste as $row): 
