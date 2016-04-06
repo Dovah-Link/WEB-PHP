@@ -1,0 +1,59 @@
+body
+{
+	background-color: #DDF3F0;
+}
+.jumbotron
+{
+	background-color: #DDF3F0;
+	margin-left: 10%;
+	position: relative;
+}
+#contenu
+{
+	visibility: hidden;
+	margin-top: 5%;
+	margin-left:3%;
+	margin-right: 3%;
+	position: relative;
+}
+.panel-title
+{
+	font-size: bold;
+	font-size: 25px;
+}
+.panel .panel-primary
+{
+	margin-top: 2%;
+	margin-left: 3%;
+	margin-right: 6%;
+}
+#label1
+{
+	visibility: hidden;
+}
+#env
+{
+	margin-left: 3%;
+}
+#dropdownMenu1
+{
+	color:black;
+}
+
+.etoile 
+{
+	color: red;
+	background-color: white;
+	font-size: 1.3em;
+}
+#ets
+{
+	width:20px;
+	background-color: #337ab7;
+	border:none;
+}
+#btnn
+{
+	width:150px;
+	margin-left: 78.5%;
+}
