@@ -20,7 +20,7 @@
 			</div>
 
 			<div class="link">
-				<a href="#">Modifier</a>
+				<a href="<?=site_url("liens/formModif/$row->id")?>">Modifier</a>
 				<a href="<?=site_url("liens/delete/$row->id")?>">Supprimer</a>
 			</div>
 	</div>

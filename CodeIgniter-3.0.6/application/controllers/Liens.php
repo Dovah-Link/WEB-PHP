@@ -51,12 +51,29 @@ class liens extends CI_Controller {
 		redirect(site_url("liens/index"));
 	}
 
-	
+	public function update($id)
+	{
+		$this->load->database();
+		$this->load->helper("url");
+
+		$titre = $this->input->post("titre");
+		$description = $this->input->post("description");
+		$url = $this->input->post("url");
+		$webm =  $this->input->post("webm");
+		$theme = strtolower($this->input->post("theme"));
+		$date = date('Y-m-d');
+		$affichage =  $this->input->post("affichage");
+
+		$requete = $this->db->query('UPDATE liens set titre=?,webmaster=?,description=?,url=?,theme=?,date=?,affichage=? WHERE id='.$id, array($titre, $webm,$description,$url,$theme,$date,$affichage));
+		redirect(site_url("liens/index"));
+	}
+
 
 	public function delete($id)
 	{
 		$this->load->database();
 		$this->load->helper("url");
+
 		$requete = $this->db->query('DELETE FROM liens WHERE id='.$id);
 		redirect(site_url("liens/index"));
 	}
@@ -65,7 +82,18 @@ class liens extends CI_Controller {
 	{
 		$this->load->database();
 		$this->load->helper("url");
+
 		$this->load->view('form');
+	}
+
+	public function formModif($id)
+	{
+		$this->load->database();
+		$this->load->helper("url");
+		$requete = $this->db->query('SELECT * FROM liens WHERE id='.$id);
+		$model["row"] = $requete->row();
+		$this->load->view('formForModif', $model);
+
 	}
 }
 
