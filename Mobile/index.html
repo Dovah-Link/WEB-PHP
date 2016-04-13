@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+	<title>Films</title>
+	<link rel="stylesheet" href="jqmobile.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.js"></script>
+	<script src="jqmobile.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+
+	<div data-role="page" id="page1" data-theme="b">
+		<div data-role="header">
+			<h3>Films</h3>
+		</div>
+		<div><img id="imgacc" src="Film.jpg"></div>
+		<div id="consult">
+			<a href="#page2" class="ui-btn" data-transition="slide">Consulter</a>
+			<a href="#page4" class="ui-btn" data-transition="slide">Mes Films</a>
+		</div>
+		
+		<div data-role="content">
+			<div data-iscroll>
+    			<ul data-role="listview" id="label0"></ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="page2" data-theme="b">
+
+		<div data-role="header">
+			<h3>Consultation Films</h3>
+			<a href="#page1" class="ui-btn-left" data-direction="reverse" data-transition="slide">Retour</a>
+		</div>
+
+		<div>
+			<input type="text" id="text" placeholder="Entrer le titre d'un film"/>
+			<input type="button" id="search" value="Rechercher"/>
+		</div>
+
+		<div data-role="content">
+			<div data-iscroll>
+    			<ul data-role="listview" id="label1"></ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="page3" data-theme="b">
+
+		<div data-role="header">
+			<h3>Details du films</h3>
+			<a href="#page1" class="ui-btn-left" data-direction="reverse" data-transition="slide">Retour</a>
+		</div>
+
+		<div data-role="content" >
+			<div data-iscroll id="contenupage2">
+    			<ul data-role="listview" id="label2"></ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div data-role="page" id="page4" data-theme="b">
+
+		<div data-role="header">
+			<h3>Mes films</h3>
+			<a href="#page1" class="ui-btn-left" data-direction="reverse" data-transition="slide">Retour</a>
+		</div>
+
+		<div><img id="travaux" src="travaux.png"></div>
+
+	</div>
+
+</body>
+
+</html>
+
