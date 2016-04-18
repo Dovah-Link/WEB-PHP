@@ -1,0 +1,52 @@
+#i
+{
+	margin-left: -55%;
+}
+
+.table
+{
+	width:100%;
+}
+
+#cinq
+{
+	width:5%;
+}
+
+#quatreneuf
+{
+	width:49%;
+}
+
+#cinq
+{
+	width:14%;
+}
+
+#info
+{
+	text-align: center;
+}
+
+.checkbox
+{
+	display:inline;
+	margin-left: 2%;
+}
+#themes
+{
+	visibility: hidden;
+}
+
+#affich
+{
+	visibility: hidden;
+}
+.win
+{
+	text-align: center;
+}
+#modifsupr
+{
+	text-align: center;
+}
