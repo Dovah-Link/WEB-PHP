@@ -1,0 +1,34 @@
+header
+{
+	height: 100px;
+	background-color: rgb(42,70,75);
+}
+/*#marque
+{
+	color:rgb(42,70,75);
+	padding-top: -5px;
+}*/
+.container-fluid
+{
+	padding:0;
+}
+#logo
+{
+	margin-top:14px;
+	width: 70px;
+}
+
+#page2 
+{
+	display: none;
+}
+#panel
+{
+	margin-top: 20px:;
+}
+.panel-footer
+{
+	background-color: rgb(221,221,220);
+}
+
+
