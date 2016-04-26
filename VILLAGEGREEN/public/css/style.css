@@ -1,6 +1,9 @@
 
 /*----------------------------------------------------------------HEADER*/
-
+.popover-content
+{
+	color:black;
+}
 #head
 {
 	background-color:rgb(47,70,75);
@@ -39,17 +42,31 @@
 {
 	width:120px;
 }
+#shop
+{
+	margin-top:-70px;
+	margin-left: 120px;
+	width:70px;
+}
+#fr
+{
+	margin-top:-104px;
+	margin-left: 180px;
+	width:30px;
+}
 
 #client
 {
-	margin-top: 20px;
+	margin-top: 30px;
 	padding-right: 25px;
-	text-align: right;
+	text-align: left;
 }
 
 #txtclient
 {
+	width:120px;
 	padding-top: 12px;
+	margin-left: 31px;
 	color:white;
 }
 #slideun
@@ -78,6 +95,41 @@
 {
 	width:100%;
 }
+
+.marque
+{
+	text-align: center;
+}
+
+#img1
+{
+	width:75%;
+	margin-top: 20px;
+}
+#img2
+{
+	width:75%;
+	margin-top: 20px;
+}
+#img3
+{
+	width:185%;
+
+	margin-top: -65px;
+}
+#img4
+{
+	width:155%;
+}
+#img5
+{
+	width:105%;
+}
+#img6
+{
+	width:165%;
+}
+
 
 
 @media screen and (max-width: 768px) 

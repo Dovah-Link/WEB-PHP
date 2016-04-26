@@ -26,6 +26,8 @@ $(document).ready(function()
 		{
 			console.log("Affichage liste okay");
 			$('#liste').empty();
+			$("#liste2").hide();
+			$("#liste").show();
 
 			for (var i=0; i< data.length; i++) 
 			{
@@ -45,32 +47,51 @@ $(document).ready(function()
 
 			$('.detail').click(function()
 			{
-				$('#liste').empty();
-
+				$('#liste2').empty();
+				$("#liste").hide();
+				$("#liste2").show();
 				var id = $(this).data("id");
+				var donnees = "query=" + id;
+				var apiURL = "http://localhost/AppMobileVILLAGEGREEN/script/detail.php";
+				$.ajax
+				({
+	 				url: apiURL,
+	 				data: donnees,
+	 				success: function (resultat) 
+	 				{
+	 					AfficheResult2(resultat);
+	 				},
+	 				error: function (request,error) 
+	 				{
+	 					alert('Une erreur est survenue, vous devez saisir un texte');
+	 				}
+	 			});
 
-
-				$.get("http://localhost/AppMobileVILLAGEGREEN/script/detail.php","id=" + id, function () 
+				function AfficheResult2(data)
 				{
-					console.log(data)
-					for (var i=0; i< data.length; i++) 
+					$("#catalogue").hide();
+					$('#liste2').empty();
+					var ligne = data[0];
+					codeHTML = '<div data-id="'+id+'" class="detail">';
+					codeHTML += '<h1 class="text-center">' + ligne.MarquesProduits + '</h1></br>';
+					codeHTML += '<h4 class="text-center">' + ligne.NomProduits + '</h4></br>';
+					codeHTML += '<img id="imageproduit" src="img/' + ligne.ImagesProduits + '"/>'
+					codeHTML += '</div>';
+					$('#liste2').append(codeHTML);
+
+					$("#loupe").click(function()
 					{
-						var ligne = data[i];
-						codeHTML = '<div data-id="'+ligne.IDProduits+'" class="detail">';
-						codeHTML += '<li class="list-group-item">';
-						codeHTML += '<span class="badge">';
-						codeHTML += '<span class="glyphicon glyphicon-menu-right">';
-						codeHTML += '</span>';
-						codeHTML += '</span>';
-						codeHTML += '<h3>' + ligne.NomProduits + '</h3>';
-						codeHTML += '<p>' + ligne.MarquesProduits + '</p>';
-						codeHTML += '</li>';
-						codeHTML += '</div>';
-						$('#liste').append(codeHTML);
-					}
-					console.log(data.results);
-				});	
-				console.log("Affichage detail okay");
+						console.log("yop");
+						$("#liste2").hide();
+						$("#catalogue").show();
+						$("#input").val("");
+						$("#liste1").show();
+					});
+					
+						
+						
+				};	
+				
 			});
 		}
 });

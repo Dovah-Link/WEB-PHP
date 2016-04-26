@@ -23,13 +23,15 @@
 			</div>
 
 			<div id="client" class="col-sm-4 col-xs-6" >
-					<p id="txtclient">ESPACE CLIENT</p>
-			</div>
+					<p id="txtclient"><a href="#" tabindex="0" class="infobulle-complexe" id="infobulle" data-toggle="popover" role="button">ESPACE CLIENT</a></p>
+					<img id="shop"src="<?=base_url("public/img/icones/shop.png")?>">
+					<img id="fr"src="<?=base_url("public/img/icones/fr.png")?>">
+			</div>		
 		</div>
 	</header>
 
 	<carousel>
-	
+		
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   			<ol class="carousel-indicators">
     			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -71,7 +73,6 @@
   			</a>
 		</div>
 	</carousel>
-
 	<vente>
 		<div class="row text-center">
 			</br>
@@ -87,9 +88,15 @@
 			<div class="col-md-4 sanspadding"><img class="fullwidth" src="<?=base_url("public/img/bestventes/3.jpg")?>"></div>		
 		</div>
 
-		<!-- <div class="row">
-			<div class="col-md-2"><img src="<?=base_url("public/img/Logos/11.png")?>"></div>
- 		</div> -->
+		<div class="row">
+			<div class="col-md-2 "><p id="marque"><img id="img1" src="<?=base_url("public/img/Logos/11.png")?>"></p></div>
+			<div class="col-md-2 "><p id="marque"><img id="img2" src="<?=base_url("public/img/Logos/2.jpg")?>"></p></div>
+			<div class="col-md-2 "><p id="marque"><img id="img3" src="<?=base_url("public/img/Logos/3.png")?>"></p></div>
+			<div class="col-md-2 "><p id="marque"><img id="img4" src="<?=base_url("public/img/Logos/4.png")?>"></p></div>
+			<div class="col-md-2 "><p id="marque"><img id="img5" src="<?=base_url("public/img/Logos/5.png")?>"></p></div>
+			<div class="col-md-2 "><p id="marque"><img id="img6" src="<?=base_url("public/img/Logos/6.png")?>"></p></div>
+ 		</div>
+
 	</vente>
 	
 </div>
@@ -99,9 +106,13 @@
 
 <script src="<?=base_url("public/scriptJS/jquery.js")?>"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="<?=base_url("public/scriptJS/bootstrap.min.js")?>"></script>
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="<?=base_url("public/scriptJS/bootstrap.js")?>"></script>
+
+<script src="<?=base_url("public/scriptJS/script.js")?>"></script>
+
+
 
