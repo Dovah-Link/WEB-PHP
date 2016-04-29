@@ -22,6 +22,14 @@ $(document).ready(function ()
 			$('.gris').css('visibility','hidden');
 			pv=false;
 		}
+
+		$(".btnLog").click(function()
+		{
+			if($(".id").val() == "toto" && $(".mdp").val() == "toto")
+			{
+				$(".cli").css('visibility','visible');
+			}
+		});	
 	});
 
 	$(".infobulle2").click(function()
@@ -58,17 +66,13 @@ $(document).ready(function ()
 			$("#inpttypes").val("1");
 		}
 	});
-	
-	$(".btnLog").click(function()
-	{
-		console.log("ouaipouaipouaip");
-		if($(".id").val == "toto" && $(".mdp").val== "toto")
-		{
-			$(".cli").css('visibility','visible');
 
-		}
+	$(".liensnom").click(function ()
+	{
+		/*var codeHTML += "<input type='text' value=''>"
+		$("#FormForModif").*/
+		console.log();
 	});
-	
 
 });
 

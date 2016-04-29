@@ -50,6 +50,8 @@ class welcome extends CI_Controller
 	{
 		$this->load->database();
 		$this->load->helper("url");
+
+		$modele["listeCli"] = $this->db->query("SELECT * FROM clients")->result();
 		$this->load->view('modif',$modele);
 	}
 }

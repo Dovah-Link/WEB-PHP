@@ -143,7 +143,7 @@ $(document).ready(function ()
 		$(".infobulle").popover
 		({		
 			html : true,
-			content : "<div class='login'><p class='text-center'>Identifiant</p><input type='text' class='id'></div><div class='mdp'><p class='text-center'>Mot de passe</p><input type='text' class='mdp'></div><input class='btnLog' type='button' value='Valider'/></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription</a><div class='cli'><a href='<?= site_url("welcome/client") ?>' >Acces client</a></div>",
+			content : "<div class='login'><p class='text-center'>Identifiant</p><input type='text' class='id'></div><div><p class='text-center'>Mot de passe</p><input type='text' class='mdp'/></div><input class='btnLog' type='button' value='Valider'/></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription</a><div class='cli'><a href='<?= site_url("welcome/client") ?>'>Acces client</a></div>",
 			placement : "bottom",
 		});
 		$(".infobulle2").popover

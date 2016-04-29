@@ -34,8 +34,14 @@
 	</header>
 
 	<article>
-		Modif Client
+		<?php 
+			foreach ($listeCli as $key => $value)
+				{
+					echo "<div class='list-group-item'><a class='liensnom' id='"+$value->IDClients+"' href='#'>$value->NomClients</a></div>";
+				}
+		?>
 	</article>
+	<form id="FormForModif"></form>
 </body>
 </html>
 
