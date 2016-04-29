@@ -4,9 +4,10 @@
 {
 	color:black;
 }
-#head
+.head
 {
 	background-color:rgb(47,70,75);
+	z-index: 2000;
 }
 
 .container {
@@ -14,61 +15,46 @@
     padding-left: 0;
 }
 
-#imglogomenu 
+.imglogomenu 
 {
 	margin-left: 30px;
 	margin-top: 16px;
 	height: 50px;
 }
 
-#imglogomenumini
-{
-	margin-left: 30px;
-	margin-top: 16px;
-	height: 30px;
-}
-
-#menulogo
+.menulogo
 {
 	text-align: left
 }
 
-#logoVG
+.logoVG
 {
 	text-align: center;
 }
 
-#imglogoVG
+.imglogoVG
 {
 	width:120px;
 }
-#shop
+.client
 {
-	margin-top:-70px;
-	margin-left: 120px;
+	margin-top:15px;
+}
+.infobulle
+{
+	margin-top: 90px;
+}
+.shop
+{
+	margin-bottom: 5px;
 	width:70px;
 }
-#fr
+.fr
 {
-	margin-top:-104px;
-	margin-left: 180px;
+	margin-right: 10px;
 	width:30px;
 }
 
-#client
-{
-	margin-top: 30px;
-	padding-right: 25px;
-	text-align: left;
-}
-
-#txtclient
-{
-	width:120px;
-	padding-top: 12px;
-	margin-left: 31px;
-	color:white;
-}
 #slideun
 {
 	width: 100%;	
@@ -86,67 +72,137 @@
 {
 	font-weight: bold;
 }
-
-/*.sanspadding
-{
-	padding:0;
-}*/
 .fullwidth
 {
 	width:100%;
 }
 
-.marque
-{
-	text-align: center;
-}
-
 #img1
 {
-	width:75%;
-	margin-top: 20px;
+	width:100px;
+	margin-top: 10px;
 }
 #img2
 {
-	width:75%;
-	margin-top: 20px;
+	width:100px;
+	margin-top: 10px;
 }
 #img3
 {
-	width:185%;
-
-	margin-top: -65px;
+	margin-top: 10px;
+	width:100px;
 }
 #img4
 {
-	width:155%;
+	width:100px;
+	margin-top: 10px;
 }
 #img5
 {
-	width:105%;
+	margin-top: 5px;
+	width:100px;
 }
 #img6
 {
-	width:165%;
+	width:100px;
+	margin-top: 15px;
 }
 
-
+.mdp
+{
+	margin-top: 10px;
+}
+.btnLog
+{
+	margin-top: 10px;
+	margin-left:55px;
+}
+.register
+{
+	margin-left:120px;
+}
 
 @media screen and (max-width: 768px) 
 {
 
-	#head
+	.head
 	{
 		background-color:rgb(47,70,75);
 		height: 90px;
+		z-index: 2000;
 	}
 
-	#imglogomenu
+	.imglogomenu
 	{
 		margin-left: 30px;
 		margin-top: 20px;
 		height: 40px;
 	}
+}
+.gris
+{
+	visibility: hidden;
+	opacity:0.5;
+	position:fixed;
+	top:90px;
+	bottom:0px;
+	right: 0px;
+	left:0px;
+	background-color: white;
+	z-index:-1000;
+}
 
+/*--------------------------------------------------------------------------------------REGISTER.php------*/
 
+#form
+{
+	margin-top: 100px;
+}
+#elements
+{
+	text-align: center;
+}
+#prenom
+{
+	margin-top:20px;
+}
+#adrs
+{
+	margin-top:20px;
+}
+#cp
+{
+		margin-top:20px;
+
+}
+#ville
+{
+		margin-top:20px;
+}
+#pays
+{
+		margin-top:20px;
+
+}
+#mail
+{
+		margin-top:20px;
+
+}
+.btn-group
+{
+		margin-top:20px;
+
+}
+#btnsubmit
+{
+		margin-top:20px;
+}
+#popover298557
+{
+	margin-left:50px;
+}
+.cli
+{
+	visibility: hidden;
 }
