@@ -22,14 +22,6 @@ $(document).ready(function ()
 			$('.gris').css('visibility','hidden');
 			pv=false;
 		}
-
-		/*$(".btnLog").click(function()
-		{
-			if($(".id").val() == "toto" && $(".mdp").val() == "toto")
-			{
-				$(".cli").css('visibility','visible');
-			}
-		});*/
 	});
 
 	$(".infobulle2").click(function()

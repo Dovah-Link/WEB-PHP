@@ -74,7 +74,7 @@
 					  	    <li><a href="#">Professionnel</a></li>
 					  	</ul>
 					</div></br>
-					<input class="btn btn-default" type="submit" id="btnsubmit" value="Submit">
+					<input class="btn btn-default" type="submit" id="btnsubmit" value="Enregistrer">
 					<input type="text" name="types" id="inpttypes" hidden />
 					
 				</div>

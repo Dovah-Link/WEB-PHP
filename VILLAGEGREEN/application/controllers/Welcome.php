@@ -79,7 +79,7 @@ class welcome extends CI_Controller
 
 			$requete = $this->db->query("UPDATE clients 
 										SET NomClients=?, PrenomClients=?, AdresseLivraisonClients=?, MailClients=?, VilleClients=?, PaysClients=?, CodePostalClients=?, TypesClients=?
-										WHERE NomClients=?",array($nom,$prenom,$adrs,$mail,$ville,$pays,$cp,$types,$nom));
+										WHERE NomClients=? AND MailClients=?",array($nom,$prenom,$adrs,$mail,$ville,$pays,$cp,$types,$nom,$mail));
 			redirect(site_url("welcome/index"));
 			
 
