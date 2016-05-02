@@ -37,11 +37,37 @@
 		<?php 
 			foreach ($listeCli as $key => $value)
 				{
-					echo "<div class='list-group-item'><a class='liensnom' id='"+$value->IDClients+"' href='#'>$value->NomClients</a></div>";
+					echo "<div class='list-group-item'><a class='$value->NomClients' href='#'>$value->NomClients</a></div>";
 				}
 		?>
 	</article>
-	<form id="FormForModif"></form>
+
+	</br>
+
+	<div class="row text-center"><h1>MODIFICATION</h1></div></br></br>
+
+	<div class="row">
+
+		<div class="col-md-4 col-sm-4 col-xs-4">
+			
+		</div>
+
+		<div class="col-md-4 col-sm-4 col-xs-4">
+			<form method="post" action="<?=site_url("welcome/update")?>">
+				<input type="text" class="form-control " placeholder="nom"  name="NomClients"></br>
+				<input type="text" class="form-control " placeholder="prenom"  name="PrenomClients"></br>
+				<input type="text" class="form-control " placeholder="adresse" name="AdresseLivraisonClients"></br>
+				<input type="text" class="form-control " placeholder="mail" name="MailClients"></br>
+				<input type="text" class="form-control " placeholder="ville" name="VilleClients"></br>
+			</form>
+		</div>
+
+		<div class="col-md-4 col-sm-4 col-xs-4">
+			
+		</div>
+	</div>
+
+	<div class="gris"></div>
 </body>
 </html>
 

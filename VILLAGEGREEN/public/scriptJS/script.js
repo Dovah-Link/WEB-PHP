@@ -66,13 +66,5 @@ $(document).ready(function ()
 			$("#inpttypes").val("1");
 		}
 	});
-
-	$(".liensnom").click(function ()
-	{
-		/*var codeHTML += "<input type='text' value=''>"
-		$("#FormForModif").*/
-		console.log();
-	});
-
 });
 

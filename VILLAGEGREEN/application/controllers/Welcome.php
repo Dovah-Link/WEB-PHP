@@ -54,4 +54,28 @@ class welcome extends CI_Controller
 		$modele["listeCli"] = $this->db->query("SELECT * FROM clients")->result();
 		$this->load->view('modif',$modele);
 	}
+	public function update()
+	{
+		$this->load->database();
+		$this->load->helper("url");
+
+		$nom = $this->input->post('NomClients');
+		$prenom = $this->input->post('PrenomClients');
+		$adrs = $this->input->post('AdresseLivraisonClients');
+		$mail = $this->input->post('MailClients');
+		$ville = $this->input->post('VilleClients');
+
+		try
+		{
+
+			$requete = $this->db->query("UPDATE clients 
+										set NomClients=?, PrenomClients=?,AdresseLivraisonClients=?,MailClients=?, VilleClients=? 
+										WHERE NomClients=?",array($nom,$prenom,$adrs,$mail,$ville,$nom));
+			$this->load->view('accueil');
+		}
+		catch( Exception $e)
+		{
+			echo "<script>alert(\"Une erreur est survenue, veuillez recommencer !\")</script>"; 
+		}
+	}
 }
