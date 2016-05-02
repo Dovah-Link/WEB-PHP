@@ -64,18 +64,48 @@ class welcome extends CI_Controller
 		$adrs = $this->input->post('AdresseLivraisonClients');
 		$mail = $this->input->post('MailClients');
 		$ville = $this->input->post('VilleClients');
+		$pays = $this->input->post('PaysClients');
+		$cp = $this->input->post('CodePostalClients');
+		$types = $this->input->post('TypesClients');
 
 		try
 		{
 
+			/*$requete = $this->db->query("UPDATE clients 
+										SET NomClients=?, PrenomClients=?, AdresseLivraisonClients=?, MailClients=?, VilleClients=?, PaysClients=?, CodePostalClients=?, TypesClients=?
+										WHERE NomClients=?",array($nom,$prenom,$adrs,$mail,$ville,$pays,$cp,$types));
+			$requete->execute();
+			redirect(site_url("welcome/index"));*/
+
 			$requete = $this->db->query("UPDATE clients 
-										set NomClients=?, PrenomClients=?,AdresseLivraisonClients=?,MailClients=?, VilleClients=? 
-										WHERE NomClients=?",array($nom,$prenom,$adrs,$mail,$ville,$nom));
-			$this->load->view('accueil');
+										SET NomClients=?, PrenomClients=?, AdresseLivraisonClients=?, MailClients=?, VilleClients=?, PaysClients=?, CodePostalClients=?, TypesClients=?
+										WHERE NomClients=?",array($nom,$prenom,$adrs,$mail,$ville,$pays,$cp,$types,$nom));
+			redirect(site_url("welcome/index"));
+			
+
 		}
 		catch( Exception $e)
 		{
-			echo "<script>alert(\"Une erreur est survenue, veuillez recommencer !\")</script>"; 
+			echo $e;
+		}
+		redirect(site_url("welcome/index"));
+	}
+	public function login()
+	{
+		$this->load->database();
+		$this->load->helper("url");
+
+		$mail = $this->input->post('login');
+		$nom = $this->input->post('mdp');
+		$modele["loger"] = $this->db->query("SELECT * FROM clients WHERE NomClients = ? AND MailClients = ?",array($nom,$mail))->result();
+		if($modele["loger"]==null)
+		{
+			$this->load->view('accueil');
+		}
+		else
+		{
+			$this->load->view('modif',$modele);
 		}
 	}
 }
+

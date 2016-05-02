@@ -104,17 +104,18 @@ $(document).ready(function ()
 		$(".infobulle").popover
 		({		
 			html : true,
-			content : "<div class='login'><p class='text-center'>Identifiant</p><input type='text'></div><div class='mdp'><p class='text-center'>Mot de passe</p><input type='text'></div><input class='btnLog' type='button' value='Valider'/></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription</a>",
+			content : "<form method='post' action ='<?= site_url("welcome/login") ?>' <div class='login'><p class='text-center'>Identifiant</p><input type='text' name='login' class='id'></div><div><p class='text-center'>Mot de passe</p><input type='password' name ='mdp' class='mdp'/></div><input class='btnLog' type='submit' value='Valider'/></form></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription</a><div class='cli'><a href='<?= site_url("welcome/client") ?>'>Acces client</a></div>",
 			placement : "bottom",
 		});
-
 		$(".infobulle2").popover
 		({		
 			html : true,
 			content : "<?php foreach ($catalogue as $key => $value){echo "<div class='list-group'><button type='button' class='list-group-item'>$value->LibelleRubrique</button></div>";}?>",
 			placement : "bottom",
 		});
+
 	});
 });
 
 </script>
+

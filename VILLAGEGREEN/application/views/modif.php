@@ -34,38 +34,62 @@
 	</header>
 
 	<article>
-		<?php 
-			foreach ($listeCli as $key => $value)
-				{
-					echo "<div class='list-group-item'><a class='$value->NomClients' href='#'>$value->NomClients</a></div>";
-				}
-		?>
+<?php
+		foreach ($loger as $key => $value)
+		{
+			
+?>
+		<form id="form" method="post" action="<?=site_url("welcome/update")?>">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-4"></div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="text-center input-group ">
+  						<input type="text" class="form-control" name="NomClients" id="nom" placeholder="NOM" aria-describedby="basic-addon1" value="<?=$value->NomClients?>">
+					</div>
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="PrenomClients" id="prenom" placeholder="PRENOM" aria-describedby="basic-addon1" value="<?=$value->PrenomClients?>">
+					</div>
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="AdresseLivraisonClients" id="adrs" placeholder="ADRESSE" aria-describedby="basic-addon1" value="<?=$value->AdresseLivraisonClients?>">
+					</div>
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="CodePostalClients" id="cp" placeholder="CODE POSTAL" aria-describedby="basic-addon1" value="<?=$value->CodePostalClients?>">
+					</div>
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="VilleClients" id="ville" placeholder="VILLE" aria-describedby="basic-addon1" value="<?=$value->VilleClients?>">
+					</div>
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="PaysClients" id="pays" placeholder="PAYS" aria-describedby="basic-addon1" value="<?=$value->PaysClients?>">
+					</div>
+
+					<div class="input-group ">
+  						<input type="text" class="form-control" name="MailClients" id="mail" placeholder="MAIL" aria-describedby="basic-addon1" value="<?=$value->MailClients?>">
+					</div>
+		
+					<div class="btn-group">
+					 	<button id="btntypes" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 		<span id="#themes">Types de Client</span>
+					 		<span class="caret"></span>
+					  	</button>
+					  	<ul class="dropdown-menu">
+					  	  	<li><a href="#">Particulier</a></li>
+					  	  	<li role="separator" class="divider"></li>
+					  	    <li><a href="#">Professionnel</a></li>
+					  	</ul>
+					</div></br>
+					<input class="btn btn-warning" type="submit" id="btnsubmit" value="Modifier">
+					<input type="text" name="TypesClients" hidden />
+					
+				</div>
+			<div class="col-md-4 col-sm-4 col-xs-4"></div>
+			</div>
+	</form>
+<?php
+	}
+?>
 	</article>
-
-	</br>
-
-	<div class="row text-center"><h1>MODIFICATION</h1></div></br></br>
-
-	<div class="row">
-
-		<div class="col-md-4 col-sm-4 col-xs-4">
-			
-		</div>
-
-		<div class="col-md-4 col-sm-4 col-xs-4">
-			<form method="post" action="<?=site_url("welcome/update")?>">
-				<input type="text" class="form-control " placeholder="nom"  name="NomClients"></br>
-				<input type="text" class="form-control " placeholder="prenom"  name="PrenomClients"></br>
-				<input type="text" class="form-control " placeholder="adresse" name="AdresseLivraisonClients"></br>
-				<input type="text" class="form-control " placeholder="mail" name="MailClients"></br>
-				<input type="text" class="form-control " placeholder="ville" name="VilleClients"></br>
-			</form>
-		</div>
-
-		<div class="col-md-4 col-sm-4 col-xs-4">
-			
-		</div>
 	</div>
+
 
 	<div class="gris"></div>
 </body>
@@ -91,7 +115,7 @@ $(document).ready(function ()
 		$(".infobulle").popover
 		({		
 			html : true,
-			content : "<div class='login'><p class='text-center'>Identifiant</p><input type='text' class='id'></div><div class='mdp'><p class='text-center'>Mot de passe</p><input type='text' class='mdp'></div><input class='btnLog' type='button' value='Valider'/></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription<a href='<?= site_url("welcome/client") ?>' hidden class='cli'>Acces client</p></a>",
+			content : "<form method='post' action ='<?= site_url("welcome/login") ?>' <div class='login'><p class='text-center'>Identifiant</p><input type='text' name='login' class='id'></div><div><p class='text-center'>Mot de passe</p><input type='password' name ='mdp' class='mdp'/></div><input class='btnLog' type='submit' value='Valider'/></form></br><a class='register' href='<?= site_url("welcome/inscription") ?>'>Inscription</a><div class='cli'><a href='<?= site_url("welcome/client") ?>'>Acces client</a></div>",
 			placement : "bottom",
 		});
 		$(".infobulle2").popover
